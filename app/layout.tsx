@@ -1,8 +1,19 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+//
 
-const inter = Inter({ subsets: ["latin"] });
+import type { Metadata } from "next";
+
+//importación Google Fonts
+import { Lora, Pacifico } from "next/font/google";
+
+import "./globals.css";
+import { Navbar } from "@/components";
+
+//Google Fonts
+const lora = Lora({ 
+  subsets: ['latin'],
+  weight: "400" 
+});
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +27,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${lora.className} h-screen px-8`}>
+        <Navbar />
+        <div className="flex justify-between">
+          <div className="w-1/3">
+          </div>
+          <div className="w-2/3 p-4 h-screen">
+            {children}
+          </div>
+
+        </div>
+
+      </body>
     </html>
   );
 }

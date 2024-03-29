@@ -1,0 +1,7 @@
+.link {
+  @apply h-10 w-10 mr-6 text-green-700 hover:text-green-900;
+}
+
+.active-link {
+  @apply text-yellow-950 
+}
