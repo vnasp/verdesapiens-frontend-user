@@ -15,9 +15,9 @@ const pacifico = Pacifico({
 
 // Ajusta tu arreglo para usar directamente los iconos importados
 const navItems = [
-  { path: '/calculadora', icon: faCalculator, arial: 'Lee más sobre la calculadora para huertos' },
-  { path: '/calendario', icon: faCalendarDays, arial: 'Lee más sobre el calendario para huertos' },
-  { path: '/informacion', icon: faRecycle, arial: 'Lee más sobre datos de sustentabilidad para huertos' },
+  { path: '/calculadora', icon: faCalculator, ariaLabel: 'Lee más sobre la calculadora para huertos' },
+  { path: '/calendario', icon: faCalendarDays, ariaLabel: 'Lee más sobre el calendario para huertos' },
+  { path: '/informacion', icon: faRecycle, ariaLabel: 'Lee más sobre datos de sustentabilidad para huertos' },
 ];
 
 
@@ -33,7 +33,7 @@ export const Navbar = () => {
         <div className="w-1/3 flex justify-end">
           {
             navItems.map(navItem => (
-              <ActiveLink key={navItem.path} path={navItem.path} icon={navItem.icon} aria-label={navItem.arial}/>
+              <ActiveLink key={navItem.path} path={navItem.path} icon={navItem.icon} ariaLabel={navItem.ariaLabel}/>
             ))
           }
         </div>

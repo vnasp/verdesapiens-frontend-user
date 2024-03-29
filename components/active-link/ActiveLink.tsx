@@ -9,14 +9,15 @@ import { IconProp } from '@fortawesome/fontawesome-svg-core'; // Importar el tip
 interface Props {
   path: string;
   icon: IconProp; // Actualizar el tipo de 'icon' para que coincida con lo esperado por FontAwesomeIcon
+  ariaLabel: string;
 }
 
-export const ActiveLink = ({ path, icon }: Props) => {
+export const ActiveLink = ({ path, icon, ariaLabel }: Props) => {
 
   const pathName = usePathname();
 
   return (
-    <Link href={path} className={`${style.link} ${(pathName === path) ? style['active-link'] : ''} `}>
+    <Link href={path} aria-label={ariaLabel} className={`${style.link} ${(pathName === path) ? style['active-link'] : ''} `}>
       <FontAwesomeIcon icon={icon} />
     </Link>
   )
