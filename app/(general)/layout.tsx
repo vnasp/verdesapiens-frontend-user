@@ -7,7 +7,7 @@ export default function
     children: React.ReactNode;
   }) {
   return (
-    <div className="bg-green-50 shadow-md rounded-md p-4 max-h-screen">
+    <div className="bg-lime-200 shadow-md rounded-lg p-4 max-h-screen">
       {children}
     </div>
   );
