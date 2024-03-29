@@ -1,5 +1,5 @@
 .link {
-  @apply h-10 w-10 mr-6 text-green-700 hover:text-green-900;
+  @apply text-3xl mr-6 text-lime-500 hover:text-lime-800;
 }
 
 .active-link {
