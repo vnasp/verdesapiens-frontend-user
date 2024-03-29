@@ -3,15 +3,16 @@
 import type { Metadata } from "next";
 
 //importación Google Fonts
-import { Lora, Pacifico } from "next/font/google";
+import { Poppins } from "next/font/google";
 
 import "./globals.css";
-import { Navbar } from "@/components";
+import { Navbar, Footer } from "@/components";
+
 
 //Google Fonts
-const lora = Lora({ 
+const poppins = Poppins({
   subsets: ['latin'],
-  weight: "400" 
+  weight: ['400', '700']
 });
 
 
@@ -26,18 +27,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${lora.className} h-screen px-8`}>
+    <html lang="es">
+      <body className={`${poppins.className} h-screen flex flex-col px-8`}>
         <Navbar />
-        <div className="flex justify-between">
+        <div className="flex justify-between h-full">
           <div className="w-1/3">
           </div>
-          <div className="w-2/3 p-4 h-screen">
+          <div className="w-2/3 p-10">
             {children}
           </div>
-
         </div>
-
+        <Footer />
       </body>
     </html>
   );
