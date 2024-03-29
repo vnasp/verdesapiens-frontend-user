@@ -37,7 +37,7 @@ button {
 }
 
 .swiper-button-next, .swiper-button-prev {
-  @apply text-yellow-200;
+  color: white !important;
 }
 
 @layer utilities {

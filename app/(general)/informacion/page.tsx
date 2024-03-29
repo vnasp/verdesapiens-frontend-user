@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { Slider } from './slideData';
+import { Slider } from './Slider';
 
 export default function InfoPage() {
 
