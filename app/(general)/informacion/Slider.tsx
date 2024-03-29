@@ -21,7 +21,7 @@ export const Slider = () => {
       {sliderData.map((slide, index) => (
         <SwiperSlide key={index}>
           <div className="px-14">
-            <h4>{slide.title}</h4>
+            <h3>{slide.title}</h3>
             <p className="py-4 text-justify">{slide.content}</p>
             <p className="py-4 text-justify">{slide.content2}</p>
           </div>
