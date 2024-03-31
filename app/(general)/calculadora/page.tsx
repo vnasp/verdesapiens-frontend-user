@@ -69,7 +69,6 @@ export default function CalculatorPage() {
             <div className="mb-4 flex flex-col items-center">
               <label htmlFor="season">Selecciona la estación del año</label>
               <select id="season" className="block w-3/4 px-4 py-2 mt-1 border border-gray-300 rounded-md shadow-sm bg-white focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 capitalize">
-
                 {seasons.map(season => (
                   <option key={season.id} value={season.season}>{season.season}</option>
                 ))}
