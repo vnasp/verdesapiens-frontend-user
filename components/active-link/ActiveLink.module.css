@@ -1,7 +1,7 @@
 .link {
-  @apply text-3xl mr-6 text-lime-500 hover:text-lime-800;
+  @apply text-4xl mr-6 text-lime-500 hover:text-yellow-300;
 }
 
 .active-link {
-  @apply text-yellow-950 
+  @apply text-yellow-950;
 }

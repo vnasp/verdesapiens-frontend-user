@@ -36,7 +36,7 @@ export default function CalculatorPage() {
     <h2 className="text-center">Calculadora para Ciclo Continuo</h2>
       <section className="flex justify-between gap-12 p-4">
         <div className="w-1/2 relative">
-          <div className="absolute bg-yellow-200 border border-yellow-300 p-4 rounded-lg top-0 -left-20">
+          <div className="absolute bg-yellow-200 border border-yellow-300 shadow-md p-4 rounded-lg top-0 -left-20">
             <h3>¿Qué es un ciclo continuo?</h3>
             <p className="mb-4">Un ciclo de cosecha continuo es cuando tienes una verdura disponible para cosechar cada semana.</p>
             <h3>¿Cuánto tarda en ser un ciclo continuo?</h3>

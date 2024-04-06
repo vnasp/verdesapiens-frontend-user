@@ -7,6 +7,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import sliderData from '../../../data/sliderData';
 
+
 export const Slider = () => {
   return (
     <Swiper
@@ -23,7 +24,7 @@ export const Slider = () => {
           <div className="px-14">
             <h3>{slide.title}</h3>
             <p className="py-4 text-justify">{slide.content}</p>
-            <p className="py-4 text-justify">{slide.content2}</p>
+            <p className="py-4 text-justify bg-yellow-200 border border-yellow-300 shadow-md p-4 rounded-lg">{slide.content2}</p>
           </div>
         </SwiperSlide>
       ))}

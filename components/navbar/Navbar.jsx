@@ -25,10 +25,10 @@ export const Navbar = () => {
   return (
     <>
       <nav className="flex justify-between items-center p-4">
-        <div className="w-1/3"></div>
-        <div className="w-1/3 flex justify-center items-center text-3xl text-lime-500">
-          <div><Image src="/logo.webp" width={56} height={56} alt="Logo VerdeSapiens" className="me-4"/></div>
-          <div><Link href="/"><h1 className={pacifico.className}>VerdeSapiens</h1></Link></div>
+        <div className="flex justify-between items-center text-3xl text-lime-500">
+          <div className="flex justify-start">
+            <Image src="/logo.webp" height={56} width={56} alt="Logo VerdeSapiens"/>
+            <Link href="/"><h1 className={`${pacifico.className} text-4xl shadow-lg`}>VerdeSapiens</h1></Link></div>
         </div>
         <div className="w-1/3 flex justify-end">
           {
@@ -37,7 +37,7 @@ export const Navbar = () => {
             ))
           }
         </div>
-      </nav></>
-
+      </nav>
+      </>
   )
 }
