@@ -19,7 +19,7 @@
 body {
   background-image: url("/background.webp");
   background-repeat: no-repeat;
-  background-size:100% 100vh;
+  background-size: 100% 100vh;
 }
 
 h2,
@@ -36,10 +36,23 @@ h3 {
 }
 
 button {
-  @apply bg-yellow-200 hover:bg-yellow-300 focus:ring-4 focus:ring-yellow-400 font-bold border-0 rounded-lg w-1/2 shadow-sm px-8 py-4 transition ease-in duration-200 transform hover:-translate-y-1 hover:scale-105 flex justify-center items-center uppercase;
+  @apply bg-yellow-200 font-bold border-0 rounded-3xl w-1/2 px-8 py-4 flex justify-center items-center uppercase;
+  box-shadow: inset 5.41px 5.41px 17px #FFF6A6, inset -5.41px -5.41px 17px #E5DC8D;
 }
 
 .swiper-button-next,
 .swiper-button-prev {
-  @apply text-yellow-300 !important;
+  @apply text-yellow-950 !important;
+  @apply bg-warmGray-200 p-8 rounded-3xl;
+  box-shadow: inset 5.41px 5.41px 17px #f1efee, inset -3px -3px 10px #c3c1c0;
+}
+
+.box__shadow-lg {
+  box-shadow: 3px 1px 3px #d3d1d0, -4px -4px 2px #f1efee;
+}
+.box__shadow-md {
+  box-shadow: inset 5.41px 5.41px 17px #FFF6A6,
+  inset -5.41px -5.41px 17px #E5DC8D,
+  5px 0px 3px #d3d1d0,
+  0px -3px 3px #f7f5f2;
 }

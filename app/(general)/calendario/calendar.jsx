@@ -76,42 +76,38 @@ const Calendar = () => {
     "Diciembre",
   ];
   const weekDayNames = [
-    "Lunes",
-    "Martes",
-    "Miércoles",
-    "Jueves",
-    "Viernes",
-    "Sábado",
-    "Domingo",
+    "Lu",
+    "Ma",
+    "Mi",
+    "Ju",
+    "Vi",
+    "Sá",
+    "Do",
   ];
 
   // Dentro de tu componente Calendar
   const monthName = monthNames[currentMonth.getMonth()];
 
   return (
-    <div className="bg-white p-2">
-      <div className="flex mb-4 items-center bg-gray-200 font-bold">
-        <div className="w-1/3">
-          <button className="w-full" onClick={goToPreviousMonth}>
-            <FontAwesomeIcon icon={faArrowLeft} className="me-4" />
-            Anterior
+    <div className="bg-warmGray-200 box__shadow-lg rounded-3xl p-4">
+      <div className="flex justify-between items-center mb-4">
+        <div className="ms-6 uppercase">
+          <h2 className="text-3xl">{monthName}</h2>
+        </div>
+        <div className="flex gap-4">
+          <button className="w-10" onClick={goToPreviousMonth}>
+            <FontAwesomeIcon icon={faArrowLeft} />
           </button>
-        </div>
-        <div className="w-1/3">
-          <h2 className="text-xl text-center">{monthName}</h2>
-        </div>
-        <div className="w-1/3">
-          <button className="w-full" onClick={goToNextMonth}>
-            Siguiente
-            <FontAwesomeIcon icon={faArrowRight} className="ms-4" />
+          <button className="w-10" onClick={goToNextMonth}>
+            <FontAwesomeIcon icon={faArrowRight} />
           </button>
         </div>
       </div>
-      <div className="grid grid-cols-7">
+      <div className="grid grid-cols-7 bg-gray-100 text-center rounded-3xl">
         {weekDayNames.map((dayName, index) => (
           <div
             key={index}
-            className="bg-gray-200 text-center border font-medium"
+            className=" border font-bold p-2"
           >
             {dayName}
           </div>
@@ -119,7 +115,7 @@ const Calendar = () => {
         {days.map((day, index) => (
           <div
             key={index}
-            className={`p-2 border text-center ${
+            className={`p-2 border ${
               new Date().toDateString() === day.toDateString()
                 ? "bg-lime-200"
                 : ""
@@ -129,13 +125,13 @@ const Calendar = () => {
             <div>
               {day.getDate()}{" "}
               {findActivitiesForDate(day).length > 0 && (
-                <FontAwesomeIcon icon={faLeaf} className="text-green-500" />
+                <FontAwesomeIcon icon={faLeaf} className="text-lime-500" />
               )}
             </div>
           </div>
         ))}
       </div>
-      <div className="mt-4">
+      <div className="m-4">
         {selectedDayActivities.length > 0 ? (
           <div>
             <h3 className="text-lg font-semibold">
@@ -150,7 +146,8 @@ const Calendar = () => {
             </ul>
           </div>
         ) : (
-          <p>No hay actividades en el día seleccionado.</p>
+          <p>Los días con <FontAwesomeIcon icon={faLeaf} className="text-lime-500 me-2" />
+ tienen actividades.</p>
         )}
       </div>
     </div>

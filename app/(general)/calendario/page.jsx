@@ -19,7 +19,7 @@ export default function CalendarPage() {
       <h2 className="text-center">Calendario para Huertos</h2>
       <section className="flex justify-between gap-12 p-4">
         <div className="w-1/4 relative">
-          <div className="absolute bg-yellow-200 border border-yellow-300 shadow-md p-4 rounded-lg top-0 -left-20">
+          <div className="absolute bg-yellow-200 box__shadow-md p-4 border-0 rounded-3xl top-0 -left-20">
             <h3>¿De qué trata?</h3>
             <p className="mb-4">
               Este calendario ofrece una guía sobre las fechas óptimas para
