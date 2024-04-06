@@ -75,47 +75,36 @@ const Calendar = () => {
     "Noviembre",
     "Diciembre",
   ];
-  const weekDayNames = [
-    "Lu",
-    "Ma",
-    "Mi",
-    "Ju",
-    "Vi",
-    "Sá",
-    "Do",
-  ];
+  const weekDayNames = ["Lu", "Ma", "Mi", "Ju", "Vi", "Sá", "Do"];
 
   // Dentro de tu componente Calendar
   const monthName = monthNames[currentMonth.getMonth()];
 
   return (
     <div className="bg-warmGray-200 box__shadow-lg rounded-3xl p-4">
-      <div className="flex justify-between items-center mb-4">
+      <div className="flex justify-between items-center mb-2">
         <div className="ms-6 uppercase">
           <h2 className="text-3xl">{monthName}</h2>
         </div>
         <div className="flex gap-4">
-          <button className="w-10" onClick={goToPreviousMonth}>
+          <button className="w-8" onClick={goToPreviousMonth}>
             <FontAwesomeIcon icon={faArrowLeft} />
           </button>
-          <button className="w-10" onClick={goToNextMonth}>
+          <button className="w-8" onClick={goToNextMonth}>
             <FontAwesomeIcon icon={faArrowRight} />
           </button>
         </div>
       </div>
       <div className="grid grid-cols-7 bg-gray-100 text-center rounded-3xl">
         {weekDayNames.map((dayName, index) => (
-          <div
-            key={index}
-            className=" border font-bold p-2"
-          >
+          <div key={index} className=" border font-bold p-2">
             {dayName}
           </div>
         ))}
         {days.map((day, index) => (
           <div
             key={index}
-            className={`p-2 border ${
+            className={`p-2 border cursor-pointer ${
               new Date().toDateString() === day.toDateString()
                 ? "bg-lime-200"
                 : ""
@@ -133,21 +122,19 @@ const Calendar = () => {
       </div>
       <div className="m-4">
         {selectedDayActivities.length > 0 ? (
-          <div>
-            <h3 className="text-lg font-semibold">
-              Actividades para el día seleccionado:
-            </h3>
-            <ul>
-              {selectedDayActivities.map((activity, index) => (
-                <li key={index}>
-                  {activity.activity}: {activity.note}
-                </li>
-              ))}
-            </ul>
-          </div>
+          <ul>
+            {selectedDayActivities.map((activity, index) => (
+              <li key={index}>
+                <b>{activity.activity}:</b> {activity.note}
+              </li>
+            ))}
+          </ul>
         ) : (
-          <p>Los días con <FontAwesomeIcon icon={faLeaf} className="text-lime-500 me-2" />
- tienen actividades.</p>
+          <p>
+            Los días con{" "}
+            <FontAwesomeIcon icon={faLeaf} className="text-lime-500 me-2" />
+            tienen actividades.
+          </p>
         )}
       </div>
     </div>
