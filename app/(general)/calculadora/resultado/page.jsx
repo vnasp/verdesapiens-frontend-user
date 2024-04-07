@@ -3,7 +3,19 @@ import { useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 
-const Loader = () => <div>Cargando...</div>;
+const Loader = () => {
+  return (
+    <div className="flex items-center justify-center h-screen">
+      <Image
+        src="/logo.png"
+        height={100}
+        width={100}
+        alt="Cargando..."
+        className="w-20 h-20 animate-spin-slow"
+      />
+    </div>
+  );
+};
 
 const ResultadoPage = () => {
   return (
@@ -129,14 +141,13 @@ const ResultadoContent = () => {
               />
             </div>
             <button
-                type="submit"
-                className="bg-yellow-200 mt-10"
-                onClick={toggleOff}
-              >
-                Volver
-              </button>
+              type="submit"
+              className="bg-yellow-200 mt-10"
+              onClick={toggleOff}
+            >
+              Volver
+            </button>
           </article>
-
         )}
       </section>
     </main>
