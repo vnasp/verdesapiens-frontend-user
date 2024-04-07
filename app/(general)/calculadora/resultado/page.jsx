@@ -1,5 +1,5 @@
 "use client";
-import { useState, Suspense } from "react";
+import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 
@@ -26,8 +26,6 @@ const ResultadoPage = () => {
 };
 
 const ResultadoContent = () => {
-  const [showConsejos, setShowConsejos] = useState(false);
-
   const searchParams = useSearchParams();
 
   const resultados = {
@@ -41,11 +39,15 @@ const ResultadoContent = () => {
     compatibilidad: searchParams.get("compatibilidad"),
   };
 
-  const toggleOn = () => {
-    setShowConsejos(true);
-  };
-  const toggleOff = () => {
-    setShowConsejos(false);
+  const toggleConsejosVisibility = () => {
+    const consejosSection = document.getElementById('consejosSection');
+    if (consejosSection.classList.contains('hidden')) {
+      consejosSection.classList.remove('hidden');
+      consejosSection.classList.add('flex');
+    } else {
+      consejosSection.classList.remove('flex');
+      consejosSection.classList.add('hidden');
+    }
   };
 
   return (
@@ -99,15 +101,14 @@ const ResultadoContent = () => {
               <button
                 type="submit"
                 className="bg-yellow-200 mt-10 w-full md:w-1/2"
-                onClick={toggleOn}
+                onClick={toggleConsejosVisibility}
               >
                 Ver Consejos
               </button>
             </div>
           </>
         )}
-        {showConsejos && (
-          <article className="absolute bg-warmGray-200 top-0 left-0 z-10 flex flex-col items-center p-4 md:p-10">
+          <article id="consejosSection"  className="hidden absolute bg-warmGray-200 top-0 left-0 z-10 flex-col items-center p-4 md:p-10">
             <div className="flex flex-col justify-center items-center md:flex-row gap-10 mb-8">
               <Image
                 src={`/icons/rotacion.webp`}
@@ -144,12 +145,12 @@ const ResultadoContent = () => {
             <button
               type="submit"
               className="bg-yellow-200 mt-10 w-full md:w-1/2"
-              onClick={toggleOff}
+              onClick={toggleConsejosVisibility}
             >
               Volver
             </button>
           </article>
-        )}
+      
       </section>
     </main>
   );
