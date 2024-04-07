@@ -4,39 +4,52 @@ import { faCalendarDays } from "@fortawesome/free-regular-svg-icons";
 
 export default function HomePage() {
   return (
-    <main className="bg-warmGray-200 box__shadow-lg rounded-2xl p-4 w-2/3">
-      <h2 className="text-4xl font-bold text-center mb-6">
+    <main className="bg-warmGray-200 box__shadow-lg rounded-2xl p-4 w-2/3 text-center">
+      <h2 className="text-4xl font-bold text-center mb-2">
         Bienvenidos a VerdeSapiens
       </h2>
-      <section class="px-4 py-8 text-xl text-justify">
-        <p class=" mb-4">
+      <section className="px-4 py-8 text-xl">
+        <p className="mb-2">
           Cada semilla plantada es un paso hacia un futuro más verde y
-          sostenible. Nuestra plataforma está diseñada para apoyarte en cada
-          etapa del ciclo de cultivo.
+          sostenible.
         </p>
-        <div class="mb-8">
-          <h3 class="font-semibold">Explora, aprende y crece con nosotros</h3>
-          <ul class="list-none pl-5">
-            <li>
-            <FontAwesomeIcon icon={faCalendarDays} className="text-lime-500" /> Calendario de Jardinería: Sigue nuestro calendario personalizado
-              para saber qué y cuándo plantar, podar, y cosechar a lo largo del
+        <div className="flex gap-10 my-10">
+          <div className="w-1/3 text-center">
+            <FontAwesomeIcon
+              icon={faCalendarDays}
+              className="text-lime-500 text-5xl bg-warmGray-200 box__shadow-lg py-2 px-4 rounded-2xl"
+            />
+            <h3>Calendario de Jardinería</h3>
+            <p>
+              Para saber qué y cuándo plantar, podar, y cosechar a lo largo del
               año.
-            </li>
-            <li>
-            <FontAwesomeIcon icon={faRecycle} className="text-lime-500" /> Consejos de Cultivo: Descubre prácticas de cultivo que promueven
-              un crecimiento saludable y sostenible.
-            </li>
-            <li>
-            <FontAwesomeIcon icon={faCalculator} className="text-lime-500" /> Herramientas Interactivas: Utiliza nuestras herramientas, como la
-              calculadora de siembra, para planificar de manera eficiente.
-            </li>
-          </ul>
+            </p>
+          </div>
+          <div className="w-1/3 text-center">
+            <FontAwesomeIcon
+              icon={faRecycle}
+              className="text-lime-500 text-5xl bg-warmGray-200 box__shadow-lg py-2 px-4 rounded-2xl"
+            />
+            <h3>Consejos de Cultivo</h3>
+            <p>
+              Descubre prácticas para un cultivo
+              saludable y sostenible.
+            </p>
+          </div>
+          <div className="w-1/3 text-center">
+            <FontAwesomeIcon
+              icon={faCalculator}
+              className="text-lime-500 text-5xl bg-warmGray-200 box__shadow-lg py-2 px-4 rounded-2xl"
+            />
+            <h3>Calculadora de siembra</h3>
+            <p>
+              Herramientas interactivas para planificar de manera eficiente.
+            </p>
+          </div>
         </div>
         <p>
-          En VerdeSapiens nos comprometemos a ofrecerte los recursos y el
-          conocimiento necesarios para que tu jardín o huerto prospere. Creemos
-          en el poder de la tierra para proporcionar y en la capacidad de cada
-          individuo para contribuir a un mundo más verde.
+          Creemos en el poder de la tierra para proporcionar y en la capacidad
+          de cada individuo para contribuir a un mundo más verde.
         </p>
       </section>
     </main>

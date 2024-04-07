@@ -57,6 +57,7 @@ button {
     5px 0px 3px #d3d1d0,
     0px -3px 3px #f7f5f2;
 }
+
 .form__input {
   @apply  w-3/4 px-6 py-2 mt-4 mb-6 rounded-2xl bg-warmGray-200 capitalize;
   box-shadow: inset 5.41px 5.41px 17px #f1efee, inset -3px -3px 10px #c3c1c0,
