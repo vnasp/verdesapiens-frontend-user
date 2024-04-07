@@ -12,7 +12,11 @@ const poppins = Poppins({
 export const metadata = {
   title: "VerdeSapiens | Herramienta digital para huertos",
   description: "Herramientas digitales como calculadora de siembre, calendario de actividades y tips sustentables para huertas",
-  keywords: ["huerto", "invernadero", "sustentabilidad"]
+  keywords: ["huerto", "invernadero", "sustentabilidad"],
+  creator: 'Valentina Muñoz',
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({ children }) {

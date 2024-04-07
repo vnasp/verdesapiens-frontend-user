@@ -1,21 +1,15 @@
-import Head from "next/head";
 import CalendarItem from "./calendar";
 import dataCalendar from "../../../data/dataCalendar";
+
+export const metadata = {
+  title: "Calendario para Huertos | VerdeSapiens",
+  description: "Calendario de siembra, cosecha y poda para huertos",
+  keywords: ["calendario", "siembra", "cosecha", "podas", "huertos"]
+};
 
 export default function CalendarPage() {
   return (
     <>
-      <Head>
-        <title>Calendario para Huertos</title>
-        <meta
-          name="description"
-          content="Calendario de siembra, cosecha y poda para huertos."
-        />
-        <meta
-          name="keywords"
-          content="calendario, siembra, cosecha, podas, huertos"
-        />
-      </Head>
     <main>
     <h2 className="text-center">Calendario para Huertos</h2>
     <section className="flex flex-col-reverse md:flex-row justify-between gap-12 md:p-4">

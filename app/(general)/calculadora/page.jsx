@@ -1,14 +1,14 @@
-import Head from 'next/head';
 import Formulario from './formulario';
+
+export const metadata = {
+  title: "Calculadora para Huertos | VerdeSapiens",
+  description: "Calculadora para siembre de cultivo continuo.s",
+  keywords: ["calculadora", "conversor", "cultivo continuo"]
+};
 
 export default function CalculatorPage() {
   return (
     <>
-    <Head>
-      <title>Calculadora para Huertos</title>
-      <meta name="description" content="Calculadora para siembre de cultivo continuo." />
-      <meta name="keywords" content="calculador, conversor, cultivo continuo" />
-    </Head>
     <main>
     <h2 className="text-center">Calculadora para Ciclo Continuo</h2>
       <section className="flex flex-col-reverse justify-between gap-12 md:flex-row  md:p-4">

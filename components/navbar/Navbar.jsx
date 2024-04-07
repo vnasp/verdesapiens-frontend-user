@@ -31,7 +31,7 @@ const navItems = [
   },
 ];
 
-export const Navbar = () => {
+export function Navbar() {
   return (
     <>
       <nav className="flex flex-col gap-4 justify-center md:flex-row md:justify-between items-center p-4 text-2xl text-lime-500">
