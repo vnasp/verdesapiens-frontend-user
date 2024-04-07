@@ -34,7 +34,7 @@ const navItems = [
 export const Navbar = () => {
   return (
     <>
-      <nav className="flex justify-between items-center p-4 text-2xl text-lime-500">
+      <nav className="flex flex-col gap-4 justify-center md:flex-row md:justify-between items-center p-4 text-2xl text-lime-500">
         <div className="flex justify-start items-center">
           <Image
             src="/logo.webp"
@@ -48,7 +48,7 @@ export const Navbar = () => {
             </h1>
           </Link>
         </div>
-        <div className="w-1/3 flex justify-end">
+        <div className="flex justify-between md:w-1/3 md:justify-end">
           {navItems.map((navItem) => (
             <ActiveLink
               key={navItem.path}

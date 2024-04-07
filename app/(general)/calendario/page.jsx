@@ -18,8 +18,8 @@ export default function CalendarPage() {
       </Head>
     <main>
     <h2 className="text-center">Calendario para Huertos</h2>
-    <section className="flex justify-between gap-12 p-4">
-      <article className="w-1/4">
+    <section className="flex flex-col-reverse md:flex-row justify-between gap-12 md:p-4">
+      <article className="md:w-1/4">
         <div className="bg-yellow-200 box__shadow-md p-4 border-0 rounded-2xl md:ml-[-6rem]">
           <h3>¿De qué trata?</h3> 
           <p className="mb-4">
@@ -34,7 +34,7 @@ export default function CalendarPage() {
           </p>
         </div>
       </article>
-      <div className="w-3/4">
+      <div className="md:w-3/4">
         <CalendarItem activities={dataCalendar} />
       </div>
     </section>

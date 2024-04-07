@@ -51,11 +51,11 @@ const ResultadoContent = () => {
   return (
     <main>
       <h2 className="text-center">Calculadora para Ciclo Continuo</h2>
-      <section className="p-10 text-lg text-justify relative">
+      <section className="p-4 md:p-10 text-lg text-justify relative">
         {resultados && (
           <>
             <article>
-              <div className="flex justify-between items-start gap-8 mb-10">
+              <div className="flex flex-col justify-center items-center md:flex-row md:justify-between md:items-start gap-8 mb-10">
                 <Image
                   src={`/icons/${resultados.verdura}.webp`}
                   height={60}
@@ -98,7 +98,7 @@ const ResultadoContent = () => {
               />
               <button
                 type="submit"
-                className="bg-yellow-200 mt-10"
+                className="bg-yellow-200 mt-10 w-full md:w-1/2"
                 onClick={toggleOn}
               >
                 Ver Consejos
@@ -107,8 +107,8 @@ const ResultadoContent = () => {
           </>
         )}
         {showConsejos && (
-          <article className="absolute bg-warmGray-200 h-full top-0 left-0 p-10 z-10 flex flex-col items-center">
-            <div className="flex gap-10 mb-8">
+          <article className="absolute bg-warmGray-200 top-0 left-0 z-10 flex flex-col items-center p-4 md:p-10">
+            <div className="flex flex-col justify-center items-center md:flex-row gap-10 mb-8">
               <Image
                 src={`/icons/rotacion.webp`}
                 height={150}
@@ -124,7 +124,7 @@ const ResultadoContent = () => {
                 {resultados.verdura} es recomendable {resultados.rotacion}
               </p>
             </div>
-            <div className="flex gap-10 mb-8">
+            <div className="flex flex-col justify-center items-center md:flex-row gap-10 mb-8">
               <p>
                 La <b>compatibilidad de cultivos</b> consiste en la plantación
                 conjunta de distintos cultivos, con la intención de promover y
@@ -138,11 +138,12 @@ const ResultadoContent = () => {
                 width={150}
                 alt="Asociación de Cultivos"
                 loading="lazy"
+                className="hidden md:block"
               />
             </div>
             <button
               type="submit"
-              className="bg-yellow-200 mt-10"
+              className="bg-yellow-200 mt-10 w-full md:w-1/2"
               onClick={toggleOff}
             >
               Volver

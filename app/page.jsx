@@ -4,8 +4,8 @@ import { faCalendarDays } from "@fortawesome/free-regular-svg-icons";
 
 export default function HomePage() {
   return (
-    <main className="bg-warmGray-200 box__shadow-lg rounded-2xl p-4 w-2/3 text-center">
-      <h2 className="text-4xl font-bold text-center mb-2">
+    <main className="bg-warmGray-200 box__shadow-lg rounded-2xl p-4 md:w-2/3 text-center">
+      <h2 className="text-3xl font-bold text-center mb-2">
         Bienvenidos a VerdeSapiens
       </h2>
       <section className="px-4 py-8 text-xl">
@@ -13,11 +13,10 @@ export default function HomePage() {
           Cada semilla plantada es un paso hacia un futuro más verde y
           sostenible.
         </p>
-        <div className="flex gap-10 my-10">
-          <article className="w-1/3 text-center">
+        <div className="flex flex-col md:flex-row gap-10 my-10">
+          <article className="md:w-1/3 text-center">
             <FontAwesomeIcon
               icon={faCalendarDays}
-              aria-hidden="true"
               className="text-lime-500 text-5xl bg-warmGray-200 box__shadow-lg py-2 px-4 rounded-2xl"
             />
             <h3>Calendario de Jardinería</h3>
@@ -25,7 +24,7 @@ export default function HomePage() {
               Para saber qué y cuándo plantar, podar, y cosechar a lo largo del año.
             </p>
           </article>
-          <article className="w-1/3 text-center">
+          <article className="md:w-1/3 text-center">
             <FontAwesomeIcon
               icon={faRecycle}
               aria-hidden="true"
@@ -37,7 +36,7 @@ export default function HomePage() {
               saludable y sostenible.
             </p>
           </article>
-          <article className="w-1/3 text-center">
+          <article className="md:w-1/3 text-center">
             <FontAwesomeIcon
               icon={faCalculator}
               aria-hidden="true"
@@ -49,7 +48,7 @@ export default function HomePage() {
             </p>
           </article>
         </div>
-        <p>
+        <p className="hidden md:block">
           Creemos en el poder de la tierra para proporcionar y en la capacidad
           de cada individuo para contribuir a un mundo más verde.
         </p>

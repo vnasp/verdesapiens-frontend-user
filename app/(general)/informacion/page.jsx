@@ -12,7 +12,7 @@ export default function InfoPage() {
       </Head>
       <main>
       <h2 className="text-center">Datos Sustentables para Huertos</h2>
-      <article>
+      <article className="custom__width md:w-auto">
         <Slider />
       </article>
       </main>

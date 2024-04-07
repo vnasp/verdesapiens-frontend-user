@@ -11,8 +11,8 @@ export default function CalculatorPage() {
     </Head>
     <main>
     <h2 className="text-center">Calculadora para Ciclo Continuo</h2>
-      <section className="flex justify-between gap-12 p-4">
-      <article className="w-1/2">
+      <section className="flex flex-col-reverse justify-between gap-12 md:flex-row  md:p-4">
+      <article className="md:w-1/2">
         <div className="bg-yellow-200 box__shadow-md p-4 border-0 rounded-2xl md:ml-[-6rem]">
           <h3>Información sobre el ciclo continuo</h3>
           <section>
@@ -29,7 +29,7 @@ export default function CalculatorPage() {
           </section>
         </div>
       </article>
-        <div className="w-1/2 relative h-1/2 pt-4">
+        <div className="md:w-1/2 pt-4">
           <Formulario/>
         </div>
       </section>

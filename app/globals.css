@@ -19,7 +19,7 @@
 body {
   background-image: url("/background.webp");
   background-repeat: no-repeat;
-  background-size: 100% 100vh;
+  background-size: auto 100%;
 }
 
 h2,
@@ -53,19 +53,26 @@ button {
 }
 .box__shadow-md {
   box-shadow: inset 5.41px 5.41px 17px #fff6a6,
-    inset -5.41px -5.41px 17px #e5dc8d, 
-    5px 0px 3px #d3d1d0,
+    inset -5.41px -5.41px 17px #e5dc8d, 5px 0px 3px #d3d1d0,
     0px -3px 3px #f7f5f2;
 }
 
 .form__input {
-  @apply  w-3/4 px-6 py-2 mt-4 mb-6 rounded-2xl bg-warmGray-200 capitalize;
+  @apply w-3/4 px-6 py-2 mt-4 mb-6 rounded-2xl bg-warmGray-200 capitalize;
   box-shadow: inset 5.41px 5.41px 17px #f1efee, inset -3px -3px 10px #c3c1c0,
-  3px 1px 1px #d3d1d0, -4px -4px 1px #f1efee;
-
+    3px 1px 1px #d3d1d0, -4px -4px 1px #f1efee;
 }
 
 .alert {
   @apply bg-warmGray-200 px-4 py-2 mt-6 rounded-2xl;
   box-shadow: 3px 1px 3px #d3d1d0, -4px -4px 2px #f1efee;
+}
+.custom__width{
+  width:80vw;
+}
+
+@media screen and (min-width: 780px) {
+  body {
+    background-size: 100% 100vh;
+  }
 }
