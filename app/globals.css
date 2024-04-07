@@ -36,14 +36,15 @@ h3 {
 }
 
 button {
-  @apply bg-yellow-200 font-bold border-0 rounded-3xl w-1/2 px-8 py-4 flex justify-center items-center uppercase;
-  box-shadow: inset 5.41px 5.41px 17px #FFF6A6, inset -5.41px -5.41px 17px #E5DC8D;
+  @apply bg-yellow-200 font-bold border-0 rounded-2xl w-1/2 px-8 py-4 flex justify-center items-center uppercase;
+  box-shadow: inset 5.41px 5.41px 17px #fff6a6,
+    inset -5.41px -5.41px 17px #e5dc8d;
 }
 
 .swiper-button-next,
 .swiper-button-prev {
   @apply text-yellow-950 !important;
-  @apply bg-warmGray-200 p-8 rounded-3xl;
+  @apply bg-warmGray-200 p-8 rounded-2xl;
   box-shadow: inset 5.41px 5.41px 17px #f1efee, inset -3px -3px 10px #c3c1c0;
 }
 
@@ -51,11 +52,19 @@ button {
   box-shadow: 3px 1px 3px #d3d1d0, -4px -4px 2px #f1efee;
 }
 .box__shadow-md {
-  box-shadow: inset 5.41px 5.41px 17px #FFF6A6,
-  inset -5.41px -5.41px 17px #E5DC8D,
-  5px 0px 3px #d3d1d0,
-  0px -3px 3px #f7f5f2;
+  box-shadow: inset 5.41px 5.41px 17px #fff6a6,
+    inset -5.41px -5.41px 17px #e5dc8d, 
+    5px 0px 3px #d3d1d0,
+    0px -3px 3px #f7f5f2;
 }
 .form__input {
-  @apply block w-3/4 px-4 py-2 mt-1 border border-gray-300 rounded-md shadow-sm bg-white focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 capitalize
+  @apply  w-3/4 px-6 py-2 mt-4 mb-6 rounded-2xl bg-warmGray-200 capitalize;
+  box-shadow: inset 5.41px 5.41px 17px #f1efee, inset -3px -3px 10px #c3c1c0,
+  3px 1px 1px #d3d1d0, -4px -4px 1px #f1efee;
+
+}
+
+.alert {
+  @apply bg-warmGray-200 px-4 py-2 mt-6 rounded-2xl;
+  box-shadow: 3px 1px 3px #d3d1d0, -4px -4px 2px #f1efee;
 }
