@@ -7,7 +7,7 @@ const Loader = () => {
   return (
     <div className="flex items-center justify-center h-screen">
       <Image
-        src="/logo.png"
+        src="/logo.webp"
         height={100}
         width={100}
         alt="Cargando..."
@@ -57,7 +57,7 @@ const ResultadoContent = () => {
             <article>
               <div className="flex justify-between items-start gap-8 mb-10">
                 <Image
-                  src={`/icons/${resultados.verdura}.png`}
+                  src={`/icons/${resultados.verdura}.webp`}
                   height={60}
                   width={60}
                   alt={resultados.verdura}
@@ -90,7 +90,7 @@ const ResultadoContent = () => {
             </article>
             <div className="flex flex-col items-center mt-4">
               <Image
-                src={`/icons/seeding.png`}
+                src={`/icons/seeding.webp`}
                 height={100}
                 width={382}
                 alt="Germinación semillas"
@@ -110,7 +110,7 @@ const ResultadoContent = () => {
           <article className="absolute bg-warmGray-200 h-full top-0 left-0 p-10 z-10 flex flex-col items-center">
             <div className="flex gap-10 mb-8">
               <Image
-                src={`/icons/rotacion.png`}
+                src={`/icons/rotacion.webp`}
                 height={150}
                 width={150}
                 alt="Rotación de Cultivos"
@@ -133,7 +133,7 @@ const ResultadoContent = () => {
                 {resultados.compatibilidad}
               </p>
               <Image
-                src={`/icons/compatibilidad.png`}
+                src={`/icons/compatibilidad.webp`}
                 height={150}
                 width={150}
                 alt="Asociación de Cultivos"

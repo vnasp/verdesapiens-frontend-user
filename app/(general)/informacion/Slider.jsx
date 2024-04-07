@@ -27,7 +27,7 @@ export const Slider = () => {
             <section className="flex flex-col justify-center items-center gap-4">
             <p className="text-justify">{slide.content}</p>
             <Image
-                  src={`/icons/${slide.icon}.png`}
+                  src={`/icons/${slide.icon}.webp`}
                   width={225}
                   height={150}
                   alt={slide.title}

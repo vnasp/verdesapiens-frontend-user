@@ -14,20 +14,21 @@ export default function HomePage() {
           sostenible.
         </p>
         <div className="flex gap-10 my-10">
-          <div className="w-1/3 text-center">
+          <article className="w-1/3 text-center">
             <FontAwesomeIcon
               icon={faCalendarDays}
+              aria-hidden="true"
               className="text-lime-500 text-5xl bg-warmGray-200 box__shadow-lg py-2 px-4 rounded-2xl"
             />
             <h3>Calendario de Jardinería</h3>
             <p>
-              Para saber qué y cuándo plantar, podar, y cosechar a lo largo del
-              año.
+              Para saber qué y cuándo plantar, podar, y cosechar a lo largo del año.
             </p>
-          </div>
-          <div className="w-1/3 text-center">
+          </article>
+          <article className="w-1/3 text-center">
             <FontAwesomeIcon
               icon={faRecycle}
+              aria-hidden="true"
               className="text-lime-500 text-5xl bg-warmGray-200 box__shadow-lg py-2 px-4 rounded-2xl"
             />
             <h3>Consejos de Cultivo</h3>
@@ -35,17 +36,18 @@ export default function HomePage() {
               Descubre prácticas para un cultivo
               saludable y sostenible.
             </p>
-          </div>
-          <div className="w-1/3 text-center">
+          </article>
+          <article className="w-1/3 text-center">
             <FontAwesomeIcon
               icon={faCalculator}
+              aria-hidden="true"
               className="text-lime-500 text-5xl bg-warmGray-200 box__shadow-lg py-2 px-4 rounded-2xl"
             />
             <h3>Calculadora de siembra</h3>
             <p>
               Herramientas interactivas para planificar de manera eficiente.
             </p>
-          </div>
+          </article>
         </div>
         <p>
           Creemos en el poder de la tierra para proporcionar y en la capacidad

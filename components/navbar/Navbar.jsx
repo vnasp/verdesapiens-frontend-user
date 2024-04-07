@@ -37,7 +37,7 @@ export const Navbar = () => {
       <nav className="flex justify-between items-center p-4 text-2xl text-lime-500">
         <div className="flex justify-start items-center">
           <Image
-            src="/logo.png"
+            src="/logo.webp"
             height={56}
             width={56}
             alt="Logo VerdeSapiens"
