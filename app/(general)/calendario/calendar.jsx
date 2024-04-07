@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import activitiesCalendar from "../../../data/activitiesCalendar";
 import {
   faLeaf,
   faArrowRight,
@@ -8,7 +7,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Calendar = () => {
+const Calendar = ({activities}) => {
   // Estado para manejar el mes actual. Inicialmente, es el mes actual.
   const [currentMonth, setCurrentMonth] = useState(new Date());
   const [selectedDayActivities, setSelectedDayActivities] = useState([]);
@@ -51,15 +50,13 @@ const Calendar = () => {
   // Función para encontrar actividades por fecha
   const findActivitiesForDate = (date) => {
     const dateString = `${date.getFullYear()}-${String(
-      date.getMonth() + 1
-    ).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
-
+      date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
+      
     // Filtra las actividades que coincidan con esta fecha
-    return activitiesCalendar.filter(
+    return activities.filter(
       (activity) => activity.date === dateString
     );
   };
-
   // Nombres de meses y días de la semana
   const monthNames = [
     "Enero",
@@ -81,10 +78,10 @@ const Calendar = () => {
   const monthName = monthNames[currentMonth.getMonth()];
 
   return (
-    <div className="bg-warmGray-200 box__shadow-lg rounded-3xl p-4">
+    <div className="bg-warmGray-200 box__shadow-lg rounded-2xl p-4">
       <div className="flex justify-between items-center mb-2">
         <div className="ms-6 uppercase">
-          <h2 className="text-3xl">{monthName}</h2>
+          <h2 className="text-2xl">{monthName}</h2>
         </div>
         <div className="flex gap-4">
           <button className="w-8" onClick={goToPreviousMonth}>
@@ -95,7 +92,7 @@ const Calendar = () => {
           </button>
         </div>
       </div>
-      <div className="grid grid-cols-7 bg-gray-100 text-center rounded-3xl">
+      <div className="grid grid-cols-7 bg-gray-100 text-center rounded-2xl">
         {weekDayNames.map((dayName, index) => (
           <div key={index} className=" border font-bold p-2">
             {dayName}
