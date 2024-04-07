@@ -6,14 +6,16 @@ export default function InfoPage() {
   return (
     <>
       <Head>
-        <title>Datos Útiles para Huertos</title>
+        <title>Datos Sustentables para Huertos</title>
         <meta name="description" content="Datos útiles para suplementar huertos." />
         <meta name="keywords" content="abono huerto, humus lombriz, cáscara de huevo, borra de cafe, ideas reciclaje" />
       </Head>
-      <h2 className="text-center">Datos Útiles para Huertos</h2>
-      <section>
+      <main>
+      <h2 className="text-center">Datos Sustentables para Huertos</h2>
+      <article>
         <Slider />
-      </section>
+      </article>
+      </main>
     </>
   )
 }
