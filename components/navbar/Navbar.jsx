@@ -39,7 +39,7 @@ const navItems = [
 export const Navbar = () => {
   return (
     <>
-      <nav className="flex justify-between items-center p-4 text-3xl text-lime-500">
+      <nav className="flex justify-between items-center p-4 text-2xl text-lime-500">
         <div className="flex justify-start items-center">
           <Image
             src="/logo.png"
