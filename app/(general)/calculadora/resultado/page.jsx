@@ -1,9 +1,19 @@
 "use client";
-import { useState } from "react";
+import { useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 
+const Loader = () => <div>Cargando...</div>;
+
 const ResultadoPage = () => {
+  return (
+    <Suspense fallback={<Loader />}>
+      <ResultadoContent />
+    </Suspense>
+  );
+};
+
+const ResultadoContent = () => {
   const [showConsejos, setShowConsejos] = useState(false);
 
   const searchParams = useSearchParams();
