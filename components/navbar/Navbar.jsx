@@ -2,12 +2,7 @@ import Link from "next/link";
 import { ActiveLink } from "../active-link/ActiveLink";
 import { Pacifico } from "next/font/google";
 import Image from "next/image";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCalculator,
-  faCalendar,
-  faRecycle,
-} from "@fortawesome/free-solid-svg-icons";
+import { faCalculator, faRecycle } from "@fortawesome/free-solid-svg-icons";
 import { faCalendarDays } from "@fortawesome/free-regular-svg-icons";
 
 //Google Fonts
