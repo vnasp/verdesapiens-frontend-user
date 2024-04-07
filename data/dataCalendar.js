@@ -1,4 +1,4 @@
-const activitiesCalendar = [
+const dataCalendar = [
   // Primavera
   {
     date: "2024-08-15",
@@ -128,4 +128,4 @@ const activitiesCalendar = [
   },
 ];
 
-export default activitiesCalendar;
+export default dataCalendar;
