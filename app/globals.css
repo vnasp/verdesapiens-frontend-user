@@ -71,6 +71,10 @@ button {
   width:80vw;
 }
 
+.footer {
+  @apply flex flex-row justify-evenly text-xs md:text-sm  p-1 md:pb-5;
+}
+
 @media screen and (min-width: 780px) {
   body {
     background-size: 100% 100vh;

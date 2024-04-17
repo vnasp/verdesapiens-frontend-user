@@ -9,10 +9,6 @@ export default function HomePage() {
         Bienvenidos a VerdeSapiens
       </h2>
       <section className="px-4 py-8 text-xl">
-        <p className="mb-2">
-          Cada semilla plantada es un paso hacia un futuro más verde y
-          sostenible.
-        </p>
         <div className="flex flex-col md:flex-row gap-10 my-10">
           <article className="md:w-1/3 text-center">
             <FontAwesomeIcon
@@ -48,9 +44,9 @@ export default function HomePage() {
             </p>
           </article>
         </div>
-        <p className="hidden md:block">
-          Creemos en el poder de la tierra para proporcionar y en la capacidad
-          de cada individuo para contribuir a un mundo más verde.
+        <p className="mb-2">
+          Cada semilla plantada es un paso hacia un futuro más verde y
+          sostenible.
         </p>
       </section>
     </main>
