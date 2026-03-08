@@ -13,6 +13,7 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import dataSlider from "../../../data/dataSlider";
 import Image from "next/image";
+import { getAssetPath } from "../../../lib/utils";
 
 export const Slider = () => {
   return (
@@ -31,7 +32,7 @@ export const Slider = () => {
           <section className="flex flex-col justify-center items-center gap-4">
             <p className="text-justify">{slide.content}</p>
             <Image
-              src={`/icons/${slide.icon}.webp`}
+              src={getAssetPath(`/icons/${slide.icon}.webp`)}
               width={225}
               height={150}
               alt={slide.title}

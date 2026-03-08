@@ -4,6 +4,7 @@ import { Pacifico } from "next/font/google";
 import Image from "next/image";
 import { faCalculator, faRecycle } from "@fortawesome/free-solid-svg-icons";
 import { faCalendarDays } from "@fortawesome/free-regular-svg-icons";
+import { getAssetPath } from "../../lib/utils";
 
 //Google Fonts
 const pacifico = Pacifico({
@@ -37,7 +38,7 @@ export function Navbar() {
       <nav className="flex flex-col gap-4 justify-center md:flex-row md:justify-between items-center p-4 text-2xl text-lime-500">
         <div className="flex justify-start items-center">
           <Image
-            src="/logo.webp"
+            src={getAssetPath("/logo.webp")}
             height={56}
             width={56}
             alt="Logo VerdeSapiens"
@@ -61,4 +62,4 @@ export function Navbar() {
       </nav>
     </>
   );
-};
+}
