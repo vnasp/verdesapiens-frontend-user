@@ -1,6 +1,10 @@
 /** @type {import('next').NextConfig} */
-const nextConfig =  {
-  output: "standalone",
+const nextConfig = {
+  output: "export",
+  basePath: "/verdesapiens-frontend-user",
+  images: {
+    unoptimized: true,
+  },
 };
 
-export default nextConfig
+export default nextConfig;
